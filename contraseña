@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class While {
+
+	public static void main(String[] args) {
+
+		Scanner teclado= new Scanner(System.in);
+		int pass=0;
+    int pass2=0;
+		int intentos=1;
+		int maximo=3;
+			    System.out.print("Introduzca su nueva contraseña:");
+					pass=teclado.nextInt();
+          
+				while((pass!=null) && (intentos<maximo)){
+					
+					System.out.print("Introduzca su contraseña para ingresar:");
+					
+          pass2=teclado.nextInt();
+          
+          if(pass==pass2){
+						System.out.println("“Felicitaciones, recordás tu contraseña”.");
+						intentos=1;
+					
+          }
+          else{
+					
+					if(intentos==3){
+						System.out.println("“Tenes que ejercitar la memoria”.");
+						intentos=intentos-maximo;
+					}
+				
+					intentos++;
+							
+			}
+			
+	}
+
+}
