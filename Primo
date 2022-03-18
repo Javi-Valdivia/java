@@ -1,0 +1,41 @@
+import java.util.Scanner;
+ 
+public class PrimoApp {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce un numero");
+        int numero = sc.nextInt();
+ 
+        //verificamos si el numero es negativo o no es primo
+        if (numero <= 1) {
+            System.out.println("El numero " + numero + " no es primo");
+        } else {
+ 
+            //extraemos numero entero
+            int raiz = (int) Math.sqrt(numero);
+            int contador = 0;
+ 
+            //Contamos el numero de divisibles
+            for (int i = raiz; i > 1; i--) {
+                if (numero % i == 0) {
+                    contador++;
+                }
+            }
+          
+                 * Si es primo el contador sera igual a 0
+             */
+            //Mensaje
+            System.out.println(">>" + contador);
+ 
+             //Muestra en un mensaje si es primo o no.
+            if (contador < 1) {
+                System.out.println("El numero " + numero + " es primo");
+            } else {
+                System.out.println("El numero " + numero + " no es primo");
+            }
+ 
+        }
+    }
+}
